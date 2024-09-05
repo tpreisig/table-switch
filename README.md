@@ -1,2 +1,2 @@
-# tables
-Marketplace spreadsheet with dark theme switch in Vanilla JavaScript 
+# table-switch
+Marketplace spreadsheet with dark theme switch written in Vanilla JavaScript 
