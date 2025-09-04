@@ -28,154 +28,160 @@
                 </div>
             </div>
             <div class="right-section">
-                <form class="search" id="searchForm">
+                <div class="search">
                     <i class="ri-search-line"></i>
-                    <input type="text" id="searchInput" placeholder="Search for a Snack" required autocomplete="off">
-                </form>
+                    <input type="text" id="searchInput" placeholder="Search for a Snack or Dish" autocomplete="off">
+                </div>
                 <i id="theme-toggle" class="ri-sun-line"></i>
             </div>
         </nav>
+        <div class="filter-section">
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                <option value="snacks">Snacks</option>
+                <option value="food">Food</option>
+            </select>
+        </div>
         <div class="trending">
-            <div class="wrapper1">
+            <div class="wrapper1" id="snacks-wrapper">
                 <div class="header">
                     <h3>Trending Snacks</h3>
                 </div>
                 <div class="container">
-                    <div id="snacks-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class="table-fixed-column">Snack</th>
-                                    <th>Price</th>
-                                    <th>Volume</th>
-                                    <th>Popularity</th>
-                                    <th>24h%</th>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna1.jpeg" width="120px">Yhogun <span>(YHO)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>543/1000</td>
-                                    <td class="green">1.9%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna2.jpeg" width="120px">Baragne <span>(BAR)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>543/1000</td>
-                                    <td class="red">-0.2%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna3.jpeg" width="120px">Remantulli <span>(REM)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>643/1000</td>
-                                    <td class="red">-1.0%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna4.jpeg" width="120px">Punarri <span>(PUN)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>593/1000</td>
-                                    <td class="green">3.2%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna5.jpeg" width="120px">Kuggeli <span>(KUG)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>443/1000</td>
-                                    <td class="green">0.9%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna6.jpeg" width="120px">Snizze <span>(SNZ)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>943/1000</td>
-                                    <td class="red">-1.4%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna7.jpeg" width="120px">Kockugne <span>(KOK)</span></td>
-                                    <td>$20.99</td>
-                                    <td>1,234.50</td>
-                                    <td>343/1000</td>
-                                    <td class="green">3.2%</td>
-                                </tr>
-                            </thead>  
-                        </table>
-                    </div>
+                    <table id="snacks-table">
+                        <thead>
+                            <tr>
+                                <th class="table-fixed-column">Snack</th>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>Popularity</th>
+                                <th>24h%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna1.jpeg" width="120px">Yhogun <span>(YHO)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>543/1000</td>
+                                <td class="green">1.9%</td>
+                            </tr>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna2.jpeg" width="120px">Baragne <span>(BAR)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>543/1000</td>
+                                <td class="red">-0.2%</td>
+                            </tr>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna3.jpeg" width="120px">Remantulli <span>(REM)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>643/1000</td>
+                                <td class="red">-1.0%</td>
+                            </tr>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna4.jpeg" width="120px">Punarri <span>(PUN)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>593/1000</td>
+                                <td class="green">3.2%</td>
+                            </tr>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna5.jpeg" width="120px">Kuggeli <span>(KUG)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>443/1000</td>
+                                <td class="green">0.9%</td>
+                            </tr>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna6.jpeg" width="120px">Snizze <span>(SNZ)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>943/1000</td>
+                                <td class="red">-1.4%</td>
+                            </tr>
+                            <tr data-category="snacks">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna7.jpeg" width="120px">Kockugne <span>(KOK)</span></td>
+                                <td>$20.99</td>
+                                <td>1,234.50</td>
+                                <td>343/1000</td>
+                                <td class="green">3.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="wrapper2">
+            <div class="wrapper2" id="food-wrapper">
                 <div class="header">
                     <h3>Trending Food</h3>
                 </div>
                 <div class="container">
-                    <div id="snacks-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class="table-fixed-column">Dishes</th>
-                                    <th>Price</th>
-                                    <th>Volume  </th>
-                                    <th>Popularity</th>
-                                    <th>24h%</th>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna5.jpeg" width="120px">Kuggeli Premium Menu <span>(KUP)</span></td>
-                                    <td>$200.99</td>
-                                    <td>1,234.50</td>
-                                    <td>543/1000</td>
-                                    <td class="green">0.2%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna6.jpeg" width="120px">Snizze Premium Menu <span>(SNP)</span></td>
-                                    <td>$239.50</td>
-                                    <td>1,234.50</td>
-                                    <td>543/1000</td>
-                                    <td class="red">-0.3%</td>
-                                </tr>
-                                <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna7.jpeg" width="120px">Kockugne Premium Edition <span>(KOP)</span></td>
-                                    <td>$220.39</td>
-                                    <td>1,234.50</td>
-                                    <td>343/1000</td>
-                                    <td class="green">1.2%</td>
-                                </tr>
-                               <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna2.jpeg" width="120px">Premium Baragne Dish <span>(BAP)</span></td>
-                                    <td>$304.35</td>
-                                    <td>1,234.50</td>
-                                    <td>843/1000</td>
-                                    <td class="green">1.1%</td>
-                                </tr> 
-                               <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna1.jpeg" width="120px">Yhogun Premium Dessert <span>(YOP)</span></td>
-                                    <td>$243.95</td>
-                                    <td>1,234.50</td>
-                                    <td>523/1000</td>
-                                    <td class="red">-1.1%</td>
-                                </tr> 
-                               <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna4.jpeg" width="120px">Punarri Premium Schleckerli <span>(PUP)</span></td>
-                                    <td>$211.95</td>
-                                    <td>1,234.50</td>
-                                    <td>732/1000</td>
-                                    <td class="green">1.1%</td>
-                                </tr> 
-                               <tr>
-                                    <td class="name-column table-fixed-column"><img src="./assets/sna3.jpeg" width="120px">Premium Renmantulli Edition <span>(PRE)</span></td>
-                                    <td>$304.35</td>
-                                    <td>1,234.50</td>
-                                    <td>543/1000</td>
-                                    <td class="green">1.1%</td>
-                                </tr> 
-                            </thead>  
-                        </table>
-                    </div>
+                    <table id="food-table">
+                        <thead>
+                            <tr>
+                                <th class="table-fixed-column">Dishes</th>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>Popularity</th>
+                                <th>24h%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna5.jpeg" width="120px">Kuggeli Premium Menu <span>(KUP)</span></td>
+                                <td>$200.99</td>
+                                <td>1,234.50</td>
+                                <td>543/1000</td>
+                                <td class="green">0.2%</td>
+                            </tr>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna6.jpeg" width="120px">Snizze Premium Menu <span>(SNP)</span></td>
+                                <td>$239.50</td>
+                                <td>1,234.50</td>
+                                <td>543/1000</td>
+                                <td class="red">-0.3%</td>
+                            </tr>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna7.jpeg" width="120px">Kockugne Premium Edition <span>(KOP)</span></td>
+                                <td>$220.39</td>
+                                <td>1,234.50</td>
+                                <td>343/1000</td>
+                                <td class="green">1.2%</td>
+                            </tr>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna2.jpeg" width="120px">Premium BaragneDish <span>(BAP)</span></td>
+                                <td>$304.35</td>
+                                <td>1,234.50</td>
+                                <td>843/1000</td>
+                                <td class="green">1.1%</td>
+                            </tr>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna1.jpeg" width="120px">Yhogun Premium Dessert <span>(YOP)</span></td>
+                                <td>$243.95</td>
+                                <td>1,234.50</td>
+                                <td>523/1000</td>
+                                <td class="red">-1.1%</td>
+                            </tr>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna4.jpeg" width="120px">Punarri Premium Schleckerli <span>(PUP)</span></td>
+                                <td>$211.95</td>
+                                <td>1,234.50</td>
+                                <td>732/1000</td>
+                                <td class="green">1.1%</td>
+                            </tr>
+                            <tr data-category="food">
+                                <td class="name-column table-fixed-column"><img src="./assets/sna3.jpeg" width="120px">Premium Renmantulli Edition <span>(PRE)</span></td>
+                                <td>$304.35</td>
+                                <td>1,234.50</td>
+                                <td>543/1000</td>
+                                <td class="green">1.1%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-
-</body>
+</body>    
 </html>

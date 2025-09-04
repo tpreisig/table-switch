@@ -10,9 +10,9 @@ Marketplace spreadsheet with dark theme switch written in Vanilla JavaScript.
 
 Press the light bulb button in the top right corner to switch between light and dark mode.
 
-![Screenshot](screenshots/tbls2.png)
+![Screenshot](assets/tbls2.png)
 
-![Screenshot](screenshots/tbls1.png)
+![Screenshot](assets/tbls1.png)
 
 ## Contact
 

@@ -209,6 +209,21 @@ nav .right-section > i:hover {
   color: aqua;
 }
 
+.filter-section {
+    margin: 20px 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter-section select {
+  background: var(--background-color-secondary);
+  color: var(--color-white);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  cursor: pointer;}
+
 .trending {
   margin: 40px;
   display: flex;
