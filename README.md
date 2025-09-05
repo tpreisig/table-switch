@@ -17,4 +17,3 @@ Press the light bulb button in the top right corner to switch between light and 
 ## Contact
 
 Created and maintained by [Tiziano Preisig](tiziano.preisig2@gmail.com) - Let's connect and build together!
-

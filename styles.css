@@ -131,8 +131,11 @@ body {
 nav {
   display: flex;
   font-size: 1.2rem;
+  width: 100%;
   justify-content: space-between;
   background: var(--background-color-primary);
+  margin: 0 auto;
+  padding: 0 45px;
 }
 
 nav .left-section,

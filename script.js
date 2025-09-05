@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.querySelector("#theme-toggle");
     const body = document.body;
-
-    console.log(themeToggle);
-    console.log(body);
+    const categoryFilter = document.querySelector("#categoryFilter");
+    const searchInput = document.querySelector("#searchInput");
+    const snacksWrapper = document.querySelector("#snacks-wrapper");
+    const foodWrapper = document.querySelector("#food-wrapper");
+    const snacksTable = document.querySelector("#snacks-table tbody");
+    const foodTable = document.querySelector("#food-table tbody");
 
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -37,4 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.value = "";
         filterTables("");
     });
+    // Search functionality
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        filterTables(query);
+    });
+
+    function filterTables(query) {
+        const selectedCategory = categoryFilter.value;
+
+        // Filter snacks table
+        const snackRows = snacksTable.querySelectorAll("tr");
+        snackRows.forEach(row => {
+            const name = row.querySelector(".name-column").textContent.toLowerCase();
+            const shouldShow = name.includes(query) && (selectedCategory === "all" || selectedCategory === "snacks");
+            row.style.display = shouldShow ? "" : "none";
+        });
+
+        // Filter food table
+        const foodRows = foodTable.querySelectorAll("tr");
+        foodRows.forEach(row => {
+            const name = row.querySelector(".name-column").textContent.toLowerCase();
+            const shouldShow = name.includes(query) && (selectedCategory === "all" || selectedCategory === "food");
+            row.style.display = shouldShow ? "" : "none";
+        });
+    }
 });

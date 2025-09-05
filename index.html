@@ -19,12 +19,11 @@
         </div>
         <nav>
             <div class="left-section">
-                <a href="href" class="logo"></a>
                 <div class="nav-links">
-                    <a href="/index.html" class="active">Home</a>
-                    <a href="/pages/charts.html">Charts</a>
-                    <a href="/pages/search.html">Search</a>
-                    <a href="/pages/about.html">About Us</a>
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Charts</a>
+                    <a href="#">Search</a>
+                    <a href="#">About Us</a>
                 </div>
             </div>
             <div class="right-section">
@@ -32,14 +31,14 @@
                     <i class="ri-search-line"></i>
                     <input type="text" id="searchInput" placeholder="Search for a Snack or Dish" autocomplete="off">
                 </div>
-                <i id="theme-toggle" class="ri-sun-line"></i>
+                <i id="theme-toggle" class="ri-sun-line" aria-label="Toggle theme"></i>
             </div>
         </nav>
         <div class="filter-section">
             <select id="categoryFilter">
                 <option value="all">All</option>
                 <option value="snacks">Snacks</option>
-                <option value="food">Food</option>
+                <option value="food">Premium Menu</option>
             </select>
         </div>
         <div class="trending">
@@ -120,7 +119,7 @@
                     <table id="food-table">
                         <thead>
                             <tr>
-                                <th class="table-fixed-column">Dishes</th>
+                                <th class="table-fixed-column">Premium Menu</th>
                                 <th>Price</th>
                                 <th>Volume</th>
                                 <th>Popularity</th>
