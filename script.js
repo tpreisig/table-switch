@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("click", () => {
         if (body.id === "light-theme") {
             body.id = "dark-theme";
+            themeToggle.className = "ri-sun-line";
             localStorage.setItem("theme", "dark-theme");
         } else {
             body.id = "light-theme";
+            themeToggle.className = "ri-moon-line";
             localStorage.setItem("theme", "light-theme");
         }
     });
